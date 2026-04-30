@@ -1,0 +1,14 @@
+D:\baitapcshap\bai_2\obj\Debug\net10.0\bai_2.GeneratedMSBuildEditorConfig.editorconfig
+D:\baitapcshap\bai_2\obj\Debug\net10.0\bai_2.AssemblyInfoInputs.cache
+D:\baitapcshap\bai_2\obj\Debug\net10.0\bai_2.AssemblyInfo.cs
+D:\baitapcshap\bai_2\obj\Debug\net10.0\bai_2.csproj.CoreCompileInputs.cache
+D:\baitapcshap\bai_2\bin\Debug\net10.0\bai_2.exe
+D:\baitapcshap\bai_2\bin\Debug\net10.0\bai_2.deps.json
+D:\baitapcshap\bai_2\bin\Debug\net10.0\bai_2.runtimeconfig.json
+D:\baitapcshap\bai_2\bin\Debug\net10.0\bai_2.dll
+D:\baitapcshap\bai_2\bin\Debug\net10.0\bai_2.pdb
+D:\baitapcshap\bai_2\obj\Debug\net10.0\bai_2.dll
+D:\baitapcshap\bai_2\obj\Debug\net10.0\refint\bai_2.dll
+D:\baitapcshap\bai_2\obj\Debug\net10.0\bai_2.pdb
+D:\baitapcshap\bai_2\obj\Debug\net10.0\bai_2.genruntimeconfig.cache
+D:\baitapcshap\bai_2\obj\Debug\net10.0\ref\bai_2.dll
