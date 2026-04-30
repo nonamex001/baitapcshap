@@ -494,7 +494,47 @@
         background-color: #229954;
       }
 
+      /* Search Bar */
+      .search-bar {
+        flex: 1;
+        max-width: 350px;
+        margin: 0 30px;
+      }
+
+      .search-bar input {
+        width: 100%;
+        padding: 10px 15px;
+        border: 2px solid #ecf0f1;
+        border-radius: 25px;
+        font-size: 14px;
+        background-color: white;
+        color: #2c3e50;
+        transition: border-color 0.3s;
+      }
+
+      .search-bar input:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+      }
+
+      .search-bar input::placeholder {
+        color: #95a5a6;
+      }
+
       /* Responsive */
+      @media (max-width: 1000px) {
+        .header-content {
+          flex-wrap: wrap;
+        }
+
+        .search-bar {
+          max-width: 100%;
+          margin: 10px 0;
+          order: 3;
+          flex-basis: 100%;
+        }
+      }
       @media (max-width: 768px) {
         .container {
           flex-direction: column;
@@ -543,6 +583,15 @@
     <header>
       <div class="header-content">
         <div class="logo">👗 Fashion Store</div>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Tìm kiếm sản phẩm..."
+            onkeyup="searchProducts(this.value)"
+            autocomplete="off"
+          />
+        </div>
         <nav>
           <a href="#home">Trang chủ</a>
           <a href="#products">Sản phẩm</a>
@@ -923,6 +972,37 @@
           };
         });
       });
+
+      // Tìm kiếm sản phẩm
+      function searchProducts(searchTerm) {
+        const productCards = document.querySelectorAll(".product-card");
+        const searchLower = searchTerm.toLowerCase().trim();
+
+        productCards.forEach((card) => {
+          const productName = card
+            .querySelector(".product-name")
+            .textContent.toLowerCase();
+          const productImage = card
+            .querySelector(".product-image")
+            .textContent.toLowerCase();
+
+          // Hiển thị card nếu tên hoặc loại sản phẩm khớp với từ khóa tìm kiếm
+          if (
+            productName.includes(searchLower) ||
+            productImage.includes(searchLower) ||
+            searchLower === ""
+          ) {
+            card.style.display = "block";
+            // Thêm animation
+            card.style.animation = "none";
+            setTimeout(() => {
+              card.style.animation = "slideIn 0.3s ease-out";
+            }, 10);
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
     </script>
   </body>
 </html>
